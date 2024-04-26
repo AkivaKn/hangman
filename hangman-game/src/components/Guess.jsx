@@ -1,14 +1,14 @@
-import { useState } from "react"
 
-function Guess({answer}) {
+
+function Guess({ answer, guess }) {
   
-  let guess = "_ _ _ _"
+
   
     return (
       <section>
         <h2>Guess section</h2>
         <h2>Hint: {answer.hint}</h2>
-        <p>Guess: {guess} </p>
+        <p className="spaced-letters">Guess: {guess} </p>
         <p>Answer: {answer.answer}</p>
       </section>
     );

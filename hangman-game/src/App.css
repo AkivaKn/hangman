@@ -9,3 +9,7 @@
 section, header{
   border: 2px solid black;
 }
+
+.spaced-letters{
+  letter-spacing: 10px;
+}

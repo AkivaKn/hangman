@@ -14,14 +14,16 @@ function App() {
    
   const [answer, setAnswer] = useState(options);
 
+  const [guess, setGuess] = useState('_____');
+
 
   return (
     <div>
       <Header />
-      <Guess answer={answer}  />
+      <Guess answer={answer} guess={guess}  />
       <Picture incorrectCount={incorrectCount} />
       <Alphabet
-        answer={answer} setIncorrectCount={setIncorrectCount}
+        answer={answer} setIncorrectCount={setIncorrectCount} setGuess={setGuess}
       />
     </div>
   );
