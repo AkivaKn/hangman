@@ -9,16 +9,22 @@ import Alphabet from './components/Alphabet';
 function App() {
 
   const [incorrectCount, setIncorrectCount] = useState(1)
-  const [character,setCharacter] = useState('h')
+
+  const options = { hint: "Sport", answer: "defgh" };
+   
+  const [answer, setAnswer] = useState(options);
+
 
   return (
     <div>
       <Header />
-      <Guess setIncorrectCount={setIncorrectCount} character={character} />
-      <Picture incorrectCount={incorrectCount}  />
-      <Alphabet setCharacter={setCharacter} />
+      <Guess answer={answer}  />
+      <Picture incorrectCount={incorrectCount} />
+      <Alphabet
+        answer={answer} setIncorrectCount={setIncorrectCount}
+      />
     </div>
   );
 }
-
+//need to make a correct answer state. 
 export default App
