@@ -1,9 +1,6 @@
 
 
 function Guess({ answer, guess }) {
-  
-
-  
     return (
       <section>
         <h2>Guess section</h2>
@@ -13,8 +10,6 @@ function Guess({ answer, guess }) {
       </section>
     );
 }
-
-//2. how does it show the current state of the guess
 
 export default Guess
 

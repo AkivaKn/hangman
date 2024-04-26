@@ -7,6 +7,4 @@ function Picture({incorrectCount}) {
     )
 }
 
-//3. how does it know when you fail. 
-
 export default Picture

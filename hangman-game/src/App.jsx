@@ -13,9 +13,11 @@ function App() {
   const options = { hint: "Sport", answer: "defgh" };
    
   const [answer, setAnswer] = useState(options);
+ 
 
   const [guess, setGuess] = useState('_____');
 
+  const [status, setStatus] = useState("in-play")
 
   return (
     <div>
@@ -23,10 +25,13 @@ function App() {
       <Guess answer={answer} guess={guess}  />
       <Picture incorrectCount={incorrectCount} />
       <Alphabet
-        answer={answer} setIncorrectCount={setIncorrectCount} setGuess={setGuess}
+        answer={answer} setIncorrectCount={setIncorrectCount} setGuess={setGuess} guess ={guess} setStatus={setStatus}
       />
     </div>
   );
 }
-//need to make a correct answer state. 
+
 export default App
+
+
+ //functionality needed to create a random word and then set guess to be the correct length of blanks. 

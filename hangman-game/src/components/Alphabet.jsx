@@ -1,10 +1,12 @@
 
-function Alphabet({ answer: { answer }, setIncorrectCount ,setGuess}) {
+function Alphabet({ answer: { answer }, setIncorrectCount ,setGuess, guess, setStatus}) {
   const letters = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
   function handleClick(e) {
     const letterSelected = e.target.innerText;
     if (!answer.includes(letterSelected)) {
-      setIncorrectCount((currCount) => {
+        setIncorrectCount((currCount) => {
+            currCount===6? setStatus("fail"):null
+            //if count is 7 then send failure message.
         return ++currCount;
       });
     } else {
@@ -22,10 +24,14 @@ function Alphabet({ answer: { answer }, setIncorrectCount ,setGuess}) {
             return char
           }
         }).join('')
+          newGuess === answer ? setStatus("success") : null;
         return newGuess
-      }) 
+      })
     }
+        e.target.disabled=true
   }
+    
+    
 
   return (
     <section>
@@ -38,6 +44,5 @@ function Alphabet({ answer: { answer }, setIncorrectCount ,setGuess}) {
   );
 }
 
-//1. add correct guess functionality. 
 
 export default Alphabet;

@@ -13,3 +13,10 @@ section, header{
 .spaced-letters{
   letter-spacing: 10px;
 }
+button:enabled{
+  background-color: rgb(99, 245, 89);
+}
+
+button:disabled{
+  background-color: rgb(241, 201, 201);
+}
