@@ -12,7 +12,7 @@ function App() {
 
   const [incorrectCount, setIncorrectCount] = useState(0)
 
-  const options = { hint: "Sport", answer: "defgh" };
+  const options = { hint: "Sport", answer: "rugby" };
    
   const [answer, setAnswer] = useState(options);
  
@@ -22,14 +22,14 @@ function App() {
   const [status, setStatus] = useState("in-play")
 
   return (
-    <div>
-      <Header />
+    <div id='container'>
+      <Header/>
       <Guess answer={answer} guess={guess}  />
       <Picture incorrectCount={incorrectCount} />
-      <Alphabet
+      <Alphabet 
         answer={answer} setIncorrectCount={setIncorrectCount} setGuess={setGuess} guess ={guess} setStatus={setStatus}
       />
-      {status === 'in-play'? null:(status === 'success'?<Success/>:<Fail/>)}
+      {status === 'in-play'? null:(status === 'success'?<Success />:<Fail />)}
     </div>
   );
 }
@@ -37,4 +37,3 @@ function App() {
 export default App
 
 
- //functionality needed to create a random word and then set guess to be the correct length of blanks. 

@@ -34,7 +34,7 @@ function Alphabet({ answer: { answer }, setIncorrectCount ,setGuess, guess, setS
     
 
   return (
-    <section>
+    <section id='alphabet'>
       <p> Alphabet Section</p>
       {letters.map((letter) => {
         return <button onClick={handleClick} key={letter}>{letter}</button>

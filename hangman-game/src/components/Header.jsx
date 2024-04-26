@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header>
+    <header  id='header'>
       <h1>Hangman Game</h1>
     </header>
   );
