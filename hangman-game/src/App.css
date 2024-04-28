@@ -64,11 +64,12 @@ button:disabled {
   text-align: center;
 }
 
-.letter{
+.letter {
   margin: 2.5px;
 }
 
-#success,#fail{
+#success,
+#fail {
   position: absolute;
   top: 30%;
   left: 30%;
@@ -76,69 +77,106 @@ button:disabled {
   font-size: 3rem;
 }
 
-#gallows{
+#gallows {
   position: absolute;
   top: 10%;
   right: 15%;
 }
 
-#rope{
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#rope {
   border: solid black 2px;
   width: 0;
   height: 60px;
+  animation: slide-down 1s ease-out forwards;
 }
 
-#head{
+#head {
   border: solid black 3px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  animation: slide-down 1s ease-out forwards;
 }
 
-#upper-body{
+#upper-body {
   display: flex;
 }
 
-#left-arm{
+#left-arm {
   height: 50px;
   width: 50px;
-  background: linear-gradient(to top left, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+  background: linear-gradient(
+    to top left,
+    #fff calc(50% - 3px),
+    black,
+    #fff calc(50% + 1px)
+  );
+  animation: slide-down 1s ease-out forwards;
 }
 
-#right-arm{
+#right-arm {
   height: 50px;
   width: 50px;
-  background: linear-gradient(to top right, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+  background: linear-gradient(
+    to top right,
+    #fff calc(50% - 3px),
+    black,
+    #fff calc(50% + 1px)
+  );
+  animation: slide-down 1s ease-out forwards;
 }
 
-#spine{
+#spine {
   border: solid black 2px;
   width: 0;
   height: 70px;
+  animation: slide-down 1s ease-out forwards;
 }
 
-#lower-body{
+#lower-body {
   display: flex;
 }
 
-#left-leg{
+#left-leg {
   height: 50px;
   width: 50px;
-  background: linear-gradient(to top left, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+  background: linear-gradient(
+    to top left,
+    #fff calc(50% - 3px),
+    black,
+    #fff calc(50% + 1px)
+  );
+  animation: slide-down 1s ease-out forwards;
 }
 
-#right-leg{
+#right-leg {
   height: 50px;
   width: 50px;
-  background: linear-gradient(to top right, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+  background: linear-gradient(
+    to top right,
+    #fff calc(50% - 3px),
+    black,
+    #fff calc(50% + 1px)
+  );
+  animation: slide-down 1s ease-out forwards;
 }
 
-.empty{
+.empty {
   height: 50px;
   width: 50px;
 }
 
-#empty-spine{
+#empty-spine {
   width: 2px;
 }
-
