@@ -27,3 +27,8 @@ Production
     - link to an API
     
 
+Still to do:
+Functionality needed to create a random word and then set guess to be the correct length of blanks. 
+New Game button
+
+
