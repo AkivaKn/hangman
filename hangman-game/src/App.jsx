@@ -10,7 +10,7 @@ import Fail from './components/Fail';
 
 function App() {
 
-  const [incorrectCount, setIncorrectCount] = useState(0)
+  const [remainingGuesses, setRemainingGuesses] = useState(7)
 
   const options = { hint: "Sport", answer: "rugby" };
    
@@ -25,9 +25,9 @@ function App() {
     <div id='container'>
       <Header/>
       <Guess answer={answer} guess={guess}  />
-      <Picture incorrectCount={incorrectCount} />
+      <Picture remainingGuesses={remainingGuesses} />
       <Alphabet 
-        answer={answer} setIncorrectCount={setIncorrectCount} setGuess={setGuess} guess ={guess} setStatus={setStatus}
+        answer={answer} setRemainingGuesses={setRemainingGuesses} setGuess={setGuess} guess ={guess} setStatus={setStatus}
       />
       {status === 'in-play'? null:(status === 'success'?<Success />:<Fail />)}
     </div>

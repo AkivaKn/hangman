@@ -38,6 +38,9 @@ button:disabled {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #guess {
@@ -60,4 +63,64 @@ button:disabled {
   left: 30%;
   color: aqua;
   font-size: 3rem;
+}
+
+#rope{
+  border: solid black 2px;
+  width: 0;
+  height: 60px;
+}
+
+#head{
+  border: solid black 3px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#upper-body{
+  display: flex;
+}
+
+#left-arm{
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to top left, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+}
+
+#right-arm{
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to top right, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+}
+
+#spine{
+  border: solid black 2px;
+  width: 0;
+  height: 70px;
+}
+
+#lower-body{
+  display: flex;
+}
+
+#left-leg{
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to top left, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+}
+
+#right-leg{
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to top right, #fff calc(50% - 3px), black , #fff calc(50% + 1px) );
+}
+
+.empty{
+  height: 50px;
+  width: 50px;
+}
+
+#empty-spine{
+  width: 2px;
 }
