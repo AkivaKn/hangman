@@ -1,5 +1,8 @@
 
-function Alphabet({ answer: { answer }, setRemainingGuesses ,setGuess, guess, setStatus}) {
+function Alphabet({ answer: { answer }, setRemainingGuesses, setGuess, guess, setStatus }) {
+  const topRow = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p']
+  const middleRow = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
+  const btmRow = ['z','x','c','v','b','n','m']
   const letters = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
   function handleClick(e) {
     const letterSelected = e.target.innerText;
@@ -35,11 +38,24 @@ function Alphabet({ answer: { answer }, setRemainingGuesses ,setGuess, guess, se
 
   return (
     <section id='alphabet'>
-      <p> Alphabet Section</p>
-      {letters.map((letter) => {
-        return <button onClick={handleClick} key={letter}>{letter}</button>
+      <div>
+      {topRow.map((letter) => {
+        return <button onClick={handleClick} key={letter} className="letter">{letter}</button>
         
       })}
+      </div>
+      <div>
+      {middleRow.map((letter) => {
+        return <button onClick={handleClick} key={letter} className="letter">{letter}</button>
+        
+      })}
+      </div>
+      <div>
+      {btmRow.map((letter) => {
+        return <button onClick={handleClick} key={letter} className="letter">{letter}</button>
+        
+      })}
+        </div>
     </section>
   );
 }

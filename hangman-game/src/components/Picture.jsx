@@ -2,6 +2,7 @@ function Picture({ remainingGuesses }) {
     return (
         <section id="picture">
             <p>Remaining Guesses: {remainingGuesses} </p>
+            <img src="../../images/hangman-0.svg" alt="gallows" id="gallows"/>
             {remainingGuesses <7 ?<div id="rope"></div>:null}
             {remainingGuesses <6 ?< div id="head"></div>:null}
       <div id="upper-body">

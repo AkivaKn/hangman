@@ -24,7 +24,7 @@ function App() {
   return (
     <div id='container'>
       <Header/>
-      <Guess answer={answer} guess={guess}  />
+      <Guess answer={answer} guess={guess} />
       <Picture remainingGuesses={remainingGuesses} />
       <Alphabet 
         answer={answer} setRemainingGuesses={setRemainingGuesses} setGuess={setGuess} guess ={guess} setStatus={setStatus}

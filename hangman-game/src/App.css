@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 section,
@@ -14,17 +15,21 @@ header {
   letter-spacing: 10px;
 }
 button:enabled {
-  background-color: rgb(99, 245, 89);
+  background-color: rgb(17, 32, 16);
+  color: #fff;
 }
 
 button:disabled {
-  background-color: rgb(241, 201, 201);
+  background-color: rgb(236, 227, 227);
+  color: black;
 }
 
 #container {
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
 }
 
 #header {
@@ -48,6 +53,7 @@ button:disabled {
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
+  text-align: center;
 }
 
 #alphabet {
@@ -55,6 +61,11 @@ button:disabled {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 3;
+  text-align: center;
+}
+
+.letter{
+  margin: 2.5px;
 }
 
 #success,#fail{
@@ -63,6 +74,12 @@ button:disabled {
   left: 30%;
   color: aqua;
   font-size: 3rem;
+}
+
+#gallows{
+  position: absolute;
+  top: 10%;
+  right: 15%;
 }
 
 #rope{
@@ -124,3 +141,4 @@ button:disabled {
 #empty-spine{
   width: 2px;
 }
+
