@@ -11,6 +11,10 @@ header {
   border: 2px solid black;
 }
 
+#header{
+  color: #4dff4d;
+}
+
 .spaced-letters {
   letter-spacing: 10px;
 }
