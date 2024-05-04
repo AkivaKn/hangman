@@ -15,6 +15,7 @@ function App() {
   const [guess, setGuess] = useState("_____");
   const [status, setStatus] = useState("in-play");
   const [newGame, setNewGame] = useState(false);
+  const [isDisabled,setIsDisabled] = useState(false)
 
   useEffect(() => {
     axios
@@ -33,6 +34,11 @@ function App() {
     setGuess("_____")
     setRemainingGuesses(6)
     setStatus('in-play')
+    setIsDisabled(false)
+setTimeout(() => {
+  setIsDisabled(true);
+  
+}, 100);
 }
 
   return (
@@ -46,6 +52,8 @@ function App() {
         setGuess={setGuess}
         guess={guess}
         setStatus={setStatus}
+        isDisabled={isDisabled}
+        setIsDisabled={setIsDisabled}
       />
       
       <button onClick={handleClick}>New Game</button>
