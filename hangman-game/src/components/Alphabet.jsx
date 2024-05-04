@@ -1,12 +1,11 @@
 
-function Alphabet({ answer: { answer }, setRemainingGuesses, setGuess, guess, setStatus }) {
+function Alphabet({ answer, setRemainingGuesses, setGuess, guess, setStatus }) {
   const topRow = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p']
   const middleRow = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
   const btmRow = ['z','x','c','v','b','n','m']
-  const letters = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
   function handleClick(e) {
     const letterSelected = e.target.innerText;
-    if (!answer.includes(letterSelected)) {
+    if (!answer.word.includes(letterSelected)) {
         setRemainingGuesses((currCount) => {
             currCount===1? setStatus("fail"):null
             //if count is 7 then send failure message.
@@ -15,7 +14,7 @@ function Alphabet({ answer: { answer }, setRemainingGuesses, setGuess, guess, se
     } else {
       setGuess((currentGuess) => {
         const matchIndexes = [];
-        answer.split('').forEach((char, index) => {
+        answer.word.split('').forEach((char, index) => {
          if (char === letterSelected) {
             matchIndexes.push(index)
           }
@@ -27,7 +26,7 @@ function Alphabet({ answer: { answer }, setRemainingGuesses, setGuess, guess, se
             return char
           }
         }).join('')
-          newGuess === answer ? setStatus("success") : null;
+          newGuess === answer.word ? setStatus("success") : null;
         return newGuess
       })
     }

@@ -1,23 +1,91 @@
 #root {
-  width: 100vw;
-  height: 100vh;
+  width: 99vw;
+  height: 99vh;
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-section,
-header {
-  border: 2px solid black;
+#header{
+  color: #607960;
+  text-align: center;
+  height: 10vh;
+  padding: 10px 0 10px 0;
 }
 
-#header{
-  color: #4dff4d;
+#guess{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  font-size: 1rem;
+}
+
+#guess h3{
+  margin-bottom: 10px;
+  height: 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#guess h2,#guess button{ 
+  padding: 6.5px;
 }
 
 .spaced-letters {
   letter-spacing: 10px;
 }
+
+
+
+#picture {
+  padding: 15px;
+  text-align: center;
+  height: 42vh;
+}
+
+#picture p{
+margin: 15px;
+}
+
+#picture img{
+  height: 30vh;
+}
+
+#alphabet{
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#alphabet button{
+margin: .15em;
+padding: .1em;
+font-size: .9srem;
+height: 1.5em;
+width: 1.5rem;
+cursor: pointer;
+}
+
+#new-game{
+  text-align: center;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-game button{
+  padding: 6.5px;
+  font-size: 1rem;
+}
+
 button:enabled {
   background-color: rgb(17, 32, 16);
   color: #fff;
@@ -28,7 +96,9 @@ button:disabled {
   color: black;
 }
 
-#container {
+
+
+/* #container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -66,11 +136,11 @@ button:disabled {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
-}
+} */
 
-.letter {
+/* .letter {
   margin: 2.5px;
-}
+} */
 
 #success,
 #fail {
@@ -82,9 +152,8 @@ button:disabled {
 }
 
 #gallows {
-  position: absolute;
-  top: 10%;
-  right: 15%;
+  position: relative;
+  
 }
 
 @keyframes slide-down {
