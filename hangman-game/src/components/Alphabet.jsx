@@ -4,14 +4,14 @@ function Alphabet({
   setGuess,
   isDisabled,
   setStatus,
-  setIsDisabled
+  setIsDisabled,
 }) {
   const topRow = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
   const middleRow = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
   const btmRow = ["z", "x", "c", "v", "b", "n", "m"];
-  
+
   function handleClick(e) {
-    e.preventDefault()
+    e.preventDefault();
     e.target.disabled = true;
 
     const letterSelected = e.target.innerText;
@@ -44,30 +44,27 @@ function Alphabet({
     }
   }
 
-
   return (
     <section id="alphabet">
-      <div>
-        <form disabled={true}>
-          {topRow.map((letter) => {
-            return isDisabled ? (
-              <button onClick={handleClick} key={letter} className="letter">
-                {letter}
-              </button>
-            ) : (
-              <button
-                disabled={false}
-                onClick={handleClick}
-                key={letter}
-                className="letter"
-              >
-                {letter}
-              </button>
-            );
-          })}
-        </form>
+      <div className="alphabet-row">
+        {topRow.map((letter) => {
+          return isDisabled ? (
+            <button onClick={handleClick} key={letter} className="letter">
+              {letter}
+            </button>
+          ) : (
+            <button
+              disabled={false}
+              onClick={handleClick}
+              key={letter}
+              className="letter"
+            >
+              {letter}
+            </button>
+          );
+        })}
       </div>
-      <div>
+      <div className="alphabet-row">
         {middleRow.map((letter) => {
           return isDisabled ? (
             <button onClick={handleClick} key={letter} className="letter">
@@ -85,7 +82,7 @@ function Alphabet({
           );
         })}
       </div>
-      <div>
+      <div className="alphabet-row">
         {btmRow.map((letter) => {
           return isDisabled ? (
             <button onClick={handleClick} key={letter} className="letter">

@@ -6,7 +6,6 @@ import Picture from "./components/Picture";
 import Alphabet from "./components/Alphabet";
 import Success from "./components/Success";
 import Fail from "./components/Fail";
-import NewGame from "./components/NewGame";
 import axios from "axios";
 
 function App() {
@@ -44,8 +43,10 @@ setTimeout(() => {
   return (
     <div id="container">
       <Header />
+      <div id="middle-section">
       <Guess answer={answer} guess={guess} />
-      <Picture remainingGuesses={remainingGuesses} />
+        <Picture remainingGuesses={remainingGuesses} />
+        </div>
       <Alphabet
         answer={answer}
         setRemainingGuesses={setRemainingGuesses}
@@ -56,7 +57,7 @@ setTimeout(() => {
         setIsDisabled={setIsDisabled}
       />
       
-      <button onClick={handleClick}>New Game</button>
+      <button onClick={handleClick} id="new-game">New Game</button>
 
       {status === "in-play" ? null : status === "success" ? (
         <Success />
